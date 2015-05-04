@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>玻璃破碎效果</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<style type="text/css">
+body{background:#666}
+.wrap{position:fixed;top:10px;bottom:10px;left:10px;right:10px;padding:10px;margin:10px}
+.col1{height:100%;position:relative;}
+.col1 img{display:block;height:100%;margin:0 auto;}
+@media screen and (max-width: 640px) {
+	.col1 img{width:100%;height:auto}
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+	<div class="col1">
+		<img id="cover" src="http://imgcache.gtimg.cn/mediastyle/mobile/event/20150420_jacky_show/img/bg.jpg" />
+	</div>
+</div>
+
+<script type="text/javascript" src="ct_ef_breakdown.js?r="></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',function(){
+	var imgs = document.querySelectorAll('img'), l = imgs.length, s = 0;
+	for (var i = 0; i < l; i++) {
+		imgs[i].initBreakdon(function() {
+			document.body.onclick = function() {
+				confirm('是否重新开始？') && location.reload()
+			}
+		});
+	};
+},false);
+</script>
+</body>
+</html>
