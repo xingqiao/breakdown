@@ -207,12 +207,7 @@
 		setTimeout(function(){bg.play()}, 0);
 		ctx.drawImage(img, 0, 0, width = c.width = img.width, height = c.height = img.height);
 		wrap.appendChild(c);
-		wrap.style.position = 'absolute';
-		wrap.style.left = img.offsetLeft + 'px';
-		wrap.style.top = img.offsetTop + 'px';
-		wrap.style.width = width + 'px';
-		wrap.style.height = height + 'px';
-		wrap.style.overflow = 'hiden';
+		wrap.style.cssText = 'position:absolute;top:' + img.offsetTop + 'px;left:' + img.offsetLeft + 'px;width:' + width + 'px;height:' + height + 'px;overflow:hiden;';
 		img.parentElement.appendChild(wrap);
 		img.style.opacity = 0;
 		// 计算破裂碎片
@@ -372,10 +367,6 @@
 		if (this.getAttribute('data-breakdown-init') == 1) {
 			return;
 		}
-		// if (typeof opts == 'function') {
-		// 	cb = opts;
-		// 	opts = null;
-		// }
 		if (arguments.length == 1) {
 			if (typeof opts == 'function') {
 				cb_end = opts;
