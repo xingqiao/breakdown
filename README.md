@@ -1,3 +1,5 @@
+> 不再更新，推荐使用 [ct_effect](https://github.com/xingqiao/ct_effect) 的 `brokenglass` 特效
+
 # breakdown
 用canvas实现的玻璃破碎效果
 支持img和canvas标签
